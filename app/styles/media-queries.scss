@@ -1,0 +1,416 @@
+@import "../bower_components/susy/sass/susy";
+@import "variables";
+
+// ==============================================//
+// Mobile styles                                 //
+// ==============================================//
+@include at-breakpoint(6 $mobile-view) {
+
+  .product .rslides_tabs a {
+    padding: 10px;
+  }
+
+
+  .product .rslides_here {
+
+    a {
+      background: url(../images/slider-circle.png) 50% 50% no-repeat;
+    }
+  }
+
+  .home .rslides_tabs {
+    display: none;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  .slogan {
+    padding-top: 30px;
+  }
+
+  .m-menu-btn {
+    display: inline-block;
+  }
+
+  .caption {
+    display: none;
+    padding-top: 30px;
+
+    p,
+    h3,
+    .name {
+      display: none;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-family: $ff1;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .caption.here {
+    display: block;
+    clear: both;
+    height: 50px;
+    text-align: center;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .news h2 {
+    font-size: 22px;
+  }
+
+  header {
+    .header-col1,
+    .header-col3 {
+      background: none;
+      text-align: center;
+    }
+
+    .header-col3 {
+      a {
+        border: 0;
+        background-color: transparent;
+        color: transparent;
+        text-shadow: none;
+        font: 0/0 a;
+      }
+
+      span {
+        color: #000;
+        font-size: 11px;
+      }
+
+      img:last-child {
+        display: none;
+      }
+    }
+  }
+
+  // Menu
+  .menu ul {
+    display: none;
+  }
+
+  // News
+  .news {
+
+    .bx-wrapper {
+      position: relative;
+      float: left;
+      padding: 0 10%;
+      width: 100%;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .bx-controls-direction {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 48px;
+      background: none;
+
+      a {
+        float: right;
+        width: 15px;
+        height: 30px;
+        -webkit-background-size: cover;
+        background-size: cover;
+
+        &:first-child {
+          float: left;
+        }
+      }
+
+      .bx-next {
+        background-position: 100% 0;
+      }
+    }
+  }
+
+  // Social
+  .social {
+
+    ul {
+      width: 100%;
+      text-align: center;
+
+      li {
+        margin-right: 55px;
+      }
+    }
+
+    form {
+      float: none;
+      margin-top: 30px;
+      width: 100%;
+      text-align: center;
+
+      label {
+        display: block;
+        float: none;
+        font-size: 11px;
+      }
+
+      input[type="email"] {
+        width: 60%;
+      }
+
+      input[type="submit"] {
+        width: 40%;
+      }
+    }
+
+    .group {
+      margin: 0 auto;
+      max-width: 580px;
+    }
+  }
+
+  // Blocks
+  .blocks table tr,
+  .blocks table tr td {
+    display: block;
+  }
+
+  .product-sizes {
+    ul li img:last-child {
+      display: none;
+    }
+  }
+
+  .product-image a {
+    padding-top: 10%;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 60px;
+      height: auto;
+    }
+  }
+
+  .back {
+    text-align: center;
+  }
+
+  .product-options form {
+    label,
+    button,
+    select {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: left;
+      font-family: $main-font;
+    }
+
+    label:before,
+    label:after {
+      top: 2px;
+    }
+  }
+
+  .product-sizes ul li {
+    padding-bottom: 10px;
+  }
+
+  .product .slogan {
+    margin-bottom: 10px;
+  }
+
+  .product-text {
+    padding: 0;
+  }
+
+  .leather-options {
+    margin-top: 30px;
+  }
+}
+
+// ==============================================//
+// Tablet styles                                 //
+// ==============================================//
+@include at-breakpoint($mobile-view 6 $tablet-view) {
+  .menu {
+    > ul > li {
+      margin-right: 30px;
+    }
+
+    > ul > li:nth-child(4),
+    > ul > li:nth-child(5),
+    > ul > li:nth-child(6) {
+      margin-left: 30px;
+    }
+
+    >ul > li > a {
+      min-width: 50px;
+    }
+
+    // Submenu
+    ul li ul {
+      margin-left: -180px;
+      width: 420px;
+
+      li a {
+        width: 138px;
+      }
+    }
+  }
+
+  // Social
+  .social {
+    form {
+      input[type="email"] {
+        width: 240px;
+      }
+
+      input[type="submit"] {
+        width: 126px;
+      }
+    }
+
+    .group {
+      margin: 0 auto;
+      max-width: 580px;
+      width: 100%;
+    }
+  }
+
+  .product-sizes {
+    ul li img:last-child {
+      display: none;
+    }
+  }
+}
+
+// ==============================================//
+// Mobile and tablet                             //
+// ==============================================//
+@include at-breakpoint(6 $tablet-view) {
+  // Social
+  .social {
+    .social-col1,
+    .social-col2 {
+      @include span-columns(6 omega, 6);
+    }
+
+    ul {
+      width: 100%;
+      text-align: center;
+
+      li {
+        margin: 0 25px;
+      }
+    }
+
+    form {
+      float: none;
+      margin-top: 30px;
+      width: 100%;
+      text-align: center;
+
+      label {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .home .slider-wrapper .rslides li:nth-child(1),
+  .home .slider-wrapper .rslides li:nth-child(3) {
+    .caption {
+      h2 {
+        padding-top: 15px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .home .slider-wrapper .rslides li:nth-child(2) {
+    .caption {
+      img {
+        padding-top: 10px;
+      }
+
+      h2 {
+        padding-top: 0;
+        font-size: 20px;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      p {
+        padding-top: 0;
+      }
+    }
+  }
+
+}
+
+
+// ==============================================//
+// Tablet and Desktop                            //
+// ==============================================//
+@include at-breakpoint($mobile-view 6) {
+  .product-image a {
+    padding-top: 17%;
+  }
+
+  .product .social {
+    display: none;
+  }
+}
+
+// ==============================================//
+// Desktop styles                                //
+// ==============================================//
+@include at-breakpoint($tablet-view 6) {
+  .home .rslides_tabs {
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
+
+  .product-sizes {
+    ul li {
+      display: inline-block;
+      padding: 0 15px;
+
+      img:first-child {
+        display: none;
+      }
+    }
+  }
+}
+
+
+// ==============================================//
+// Other media                                   //
+// ==============================================//
+@include at-breakpoint(6 810px) {
+  .home .rslides_tabs {
+    display: none;
+  }
+}

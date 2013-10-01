@@ -1,0 +1,15 @@
+$mobile-view:  768px;
+$tablet-view:  1000px;
+
+$main-color : #0C0D0F;
+$main-font  : proxima_novasemibold;
+$ff1        : bebasregular;
+$ff2        : ACaslonPro-SemiboldItalic;
+$ff3        : proxima_novasemibold_italic;
+
+// Grid
+// ===================================
+$total-columns  : 6;        // a 6-column grid
+$column-width   : 150px;    // each column is 150px wide
+$gutter-width   : 20px;     // 20px gutters between columns
+$grid-padding   : 0;        // grid-padding equal to gutters
