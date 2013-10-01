@@ -1,0 +1,63 @@
+@import "variables";
+
+.product header {
+  margin-bottom: 40px;
+}
+
+footer td {
+padding: 0px 0 60px 0;
+}
+
+footer td a{
+  text-decoration: none;
+}
+
+// Back to top
+// ===================================
+.back-to-top {
+  position: relative;
+  top: 50px;
+  text-align: center;
+
+  p {
+    background: none;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 50px;
+    background-color: #fff;
+  }
+}
+
+// Blocks
+// ===================================
+.spotlight .wrapper .blocks table td{
+  vertical-align: top;
+}
+.spotlight .wrapper .blocks table td a {
+  padding-top: 180px;
+}
+.spotlight .wrapper .blocks table:nth-child(2n+2) td a{
+  padding-top: 160px
+}
+.spotlight .wrapper .blocks table td h2 {
+  font-size: 24px;
+  font-family: bebasregular;
+}
+.spotlight .wrapper .blocks table td p {
+  font-size: 20px;
+  font-family: ACaslonPro-SemiboldItalic;
+}
+.spotlight .wrapper .blocks table:first-of-type td:nth-child(3) a {
+  padding-top: 180px;
+}
+.spotlight .wrapper .blocks table td img{
+  vertical-align: top;
+}
+.blocks table:first-of-type td:nth-child(2):hover a, .blocks table:first-of-type td:nth-child(1):hover a {
+padding-top: 180px;
+}
+.spotlight .wrapper .blocks table td .hover{
+  margin-top: -50px;
+}

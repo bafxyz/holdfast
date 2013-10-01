@@ -1,0 +1,120 @@
+@import "../bower_components/susy/sass/susy";
+@import "variables";
+
+.product header {
+  margin-bottom: 40px;
+}
+
+footer td {
+padding: 0px 0 60px 0;
+}
+
+footer td a{
+  text-decoration: none;
+}
+
+// Back to top
+// ===================================
+.back-to-top {
+  position: relative;
+  top: 50px;
+  text-align: center;
+
+  p {
+    background: none;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 50px;
+    background-color: #fff;
+  }
+}
+
+// Content
+// ===================================
+.contentWrapper{
+  @include container;
+}
+.leftWrapper{
+  @include span-columns(1,3);
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.rightWrapper{
+  @include span-columns(2 omega,3);
+  .product-image h2{
+    font: 26px bebasregular;
+    color: #fff;
+    letter-spacing: 7px;
+    padding-bottom: 15px;
+  }
+  .product-image{
+    margin-bottom: 10px;
+  }
+  .text{
+    padding-top: 30px;
+  }
+  .bx-wrapper .bx-controls-direction a.bx-prev {
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    outline: 0;
+    width: 7px;
+    left: -23px;
+    height: 13px;
+    text-indent: -9999px;
+    z-index: 9999;
+    background: url(../images/leftArrow.gif) no-repeat;
+  }
+  .bx-wrapper .bx-controls-direction a.bx-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    outline: 0;
+    width: 7px;
+    right: -15px;
+    height: 13px;
+    text-indent: -9999px;
+    z-index: 9999;
+    background: url(../images/rightArrow.gif) no-repeat;
+  }
+}
+.description{
+  text-align: center;
+  background: #231F20;
+  color: #fff;
+  padding: 40px 0;
+  width: 100%;
+  img{
+    width: auto;
+    height: auto;
+  }
+  p{
+    color: #fff;
+  }
+  ul{
+    width: 100%;
+    text-align: center;
+    li{
+      display: inline-block;
+      padding: 10px 5px;
+    }
+  }
+  h3{
+    font-size: 20px;
+    font-family: bebasregular;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  h4{
+    font-size: 12px;
+    color: #AC815F;
+    letter-spacing: 4px;
+    font-family: bebasregular;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
