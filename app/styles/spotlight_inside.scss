@@ -1,52 +1,24 @@
 @import "../bower_components/susy/sass/susy";
 @import "variables";
 
-.product header {
-  margin-bottom: 40px;
-}
-
-footer td {
-  padding: 0 0 60px 0;
-}
-
-footer td a {
-  text-decoration: none;
-}
-
-// Back to top
-// ===================================
-.back-to-top {
-  position: relative;
-  top: 50px;
-  text-align: center;
-
-  p {
-    background: none;
-  }
-
-  a {
-    display: inline-block;
-    padding: 0 50px;
-    background-color: #fff;
-  }
-}
-
 // Content
 // ===================================
-.contentWrapper {
+.inside .contentWrapper {
   @include container;
 }
 
-.leftWrapper {
+.inside .leftWrapper {
   @include span-columns(1, 3);
+
   img {
     width: 100%;
     height: auto;
   }
 }
 
-.rightWrapper {
+.inside .rightWrapper {
   @include span-columns(2 omega, 3);
+
   .product-image h2 {
     padding-bottom: 15px;
     color: #fff;
@@ -62,34 +34,34 @@ footer td a {
     padding-top: 30px;
   }
 
-  .bx-wrapper .bx-controls-direction a.bx-prev {
-    position: absolute;
-    top: 50%;
-    left: -23px;
-    z-index: 9999;
-    margin-top: -5px;
-    width: 7px;
-    height: 13px;
-    outline: 0;
-    background: url(../images/leftArrow.gif) no-repeat;
-    text-indent: -9999px;
+  .bx-wrapper {
+    position: relative;
   }
 
-  .bx-wrapper .bx-controls-direction a.bx-next {
-    position: absolute;
-    top: 50%;
-    right: -15px;
-    z-index: 9999;
-    margin-top: -5px;
-    width: 7px;
-    height: 13px;
-    outline: 0;
-    background: url(../images/rightArrow.gif) no-repeat;
-    text-indent: -9999px;
+  .bx-controls-direction {
+    a {
+      position: absolute;
+      top: 50%;
+      left: -23px;
+      z-index: 9999;
+      margin-top: -5px;
+      display: inline-block;
+      width: 7px;
+      height: 14px;
+      background: url(../images/slider-nav.png) 0 0 no-repeat;
+      text-indent: -9999px;
+    }
+
+    .bx-next {
+      background-position: 100% 0;
+      left: auto;
+      right: -23px;
+    }
   }
+
 }
 
-.description {
+.inside .description {
   padding: 40px 0;
   width: 100%;
   background: #231F20;

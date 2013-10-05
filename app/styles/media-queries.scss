@@ -265,17 +265,17 @@
   }
 
   // Spotlight inside page styles
-  .bx-controls {
+  .inside .bx-controls {
     display: none;
   }
 
-  .leftWrapper {
+  .inside .leftWrapper {
     @include span-columns(3 omega, 3);
     margin-top: 40px;
     background: #231F20;
   }
 
-  .rightWrapper {
+  .inside .rightWrapper {
     @include span-columns(3 omega, 3);
   }
 
@@ -352,7 +352,7 @@
   }
 
   //SC styles for Spotlight inside page
-  .leftWrapper {
+  .inside .leftWrapper {
     @include span-columns(3 omega, 3);
     margin-top: 40px;
     background: #231F20;
@@ -372,7 +372,7 @@
     }
   }
 
-  .rightWrapper {
+  .inside .rightWrapper {
     @include span-columns(3 omega, 3);
   }
 } // END of Tablet styles

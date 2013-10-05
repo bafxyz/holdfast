@@ -63,7 +63,7 @@ $(function() {
 
   // Home page News-block SLider
 
-  if ($('.bxslider').length !== 0) {
+  if ($('.home .bxslider').length !== 0) {
     $('.bxslider').bxSlider({
       auto: true,
       autoControls: false,
@@ -72,6 +72,18 @@ $(function() {
       maxSlides: 1,
       moveSlides: 1,
       slideMargin: 1
+    });
+  }
+
+  // Spotlight page News-block SLider
+
+  if ($('.inside').length !== 0) {
+    $('.inside .bxslider').bxSlider({
+      minSlides: 6,
+      maxSlides: 6,
+      slideWidth: 90,
+      slideMargin: 10,
+      pager: false
     });
   }
 

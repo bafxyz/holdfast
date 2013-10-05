@@ -8,7 +8,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css({.tmp,app}) styles/main.css -->
         <!-- bxSlider CSS file -->
-    <link href="/scripts/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!--[if lt IE 9]>
@@ -93,7 +92,7 @@
             </a>
           </div>
           <!-- #product image-->
-          <ul class="bxslider2 mobile-hide">
+          <ul class="bxslider mobile-hide">
             <li><a href="#"><img src="/images/pic1.jpg" /></a></li>
             <li><a href="#"><img src="/images/pic2.jpg" /></a></li>
             <li><a href="#"><img src="/images/pic3.jpg" /></a></li>
@@ -154,20 +153,15 @@
       </div>
       <!-- #social-->
 
-      <div class="back-to-top">
-        <p>
-          <a href="#" class="top-link"><img src="images/back-to-top.png" alt="" width="81" height="72"></a>
-        </p>
-      </div>
-      <!-- #back to top-->
-
-      <footer class="mobile-hide">
+      <footer>
         <table>
           <tr>
             <td>
               Copyright © 2013 HoldFastGear.com
             </td>
-            <td></td>
+            <td>
+              <a href="/"><img src="images/logo-footer.png" alt="" width="108" height="44"></a>
+            </td>
             <td>
               <a href="#">made by flosites</a>
             </td>
@@ -175,38 +169,12 @@
         </table>
       </footer>
       <!-- #footer-->
-
-      <footer class="desktop-tablet-hide">
-        <table>
-          <tr>
-            <td>
-              Copyright © 2013 HoldFastGear.com
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">made by flosites</a>
-            </td>
-          </tr>
-        </table>
-      </footer>
-      <!-- #mobile footer-->
     </div>
 
     <!-- build:js scripts/main.js -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="scripts/main.js"></script>
-    <!-- bxSlider Javascript file -->
-    <script src="/scripts/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script src="bower_components/bxslider-4/jquery.bxslider.min.js"></script>
     <!-- endbuild -->
-    <script type="text/Javascript">
-      $('.bxslider2').bxSlider({
-        minSlides: 6,
-        maxSlides: 6,
-        slideWidth: 90,
-        slideMargin: 10,
-        pager: false
-      });
-    </script>
-</body>
+  </body>
 </html>
