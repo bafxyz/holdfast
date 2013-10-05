@@ -198,8 +198,8 @@
   }
 
   // Blocks
-  .home .blocks table tr,
-  .home .blocks table tr td {
+  .blocks table tr,
+  .blocks table tr td {
     display: block;
   }
 
@@ -264,7 +264,7 @@
     }
   }
 
-  // SC Spotlight inside page styles
+  // Spotlight inside page styles
   .bx-controls {
     display: none;
   }
@@ -279,7 +279,7 @@
     @include span-columns(3 omega, 3);
   }
 
-  // SC styles for news page
+  // styles for news page
   .news .row .column img {
     max-width: 80%;
     height: auto;
@@ -349,11 +349,6 @@
     ul li img:last-child {
       display: none;
     }
-  }
-
-  //SC styles for Spotlight page
-  .spotlight .wrapper .blocks table td .hover {
-    margin-top: -70px;
   }
 
   //SC styles for Spotlight inside page

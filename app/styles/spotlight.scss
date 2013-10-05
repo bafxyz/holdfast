@@ -1,72 +1,61 @@
 @import "variables";
 
-.product header {
-  margin-bottom: 40px;
-}
-
-footer td {
-  padding: 0 0 60px 0;
-}
-
-footer td a {
-  text-decoration: none;
-}
-
-// Back to top
-// ===================================
-.back-to-top {
+.spotlight h1 {
   position: relative;
-  top: 50px;
-  text-align: center;
-
-  p {
-    background: none;
-  }
-
-  a {
-    display: inline-block;
-    padding: 0 50px;
-    background-color: #fff;
-  }
-}
-
-// Blocks
-// ===================================
-.spotlight .wrapper .blocks table td {
-  vertical-align: top;
-}
-
-.spotlight .wrapper .blocks table td a {
-  padding-top: 180px;
-}
-
-.spotlight .wrapper .blocks table:nth-child(2n+2) td a {
-  padding-top: 160px;
-}
-
-.spotlight .wrapper .blocks table td h2 {
-  font-size: 24px;
-  font-family: bebasregular;
-}
-
-.spotlight .wrapper .blocks table td p {
   font-size: 20px;
-  font-family: ACaslonPro-SemiboldItalic;
+  text-align: center;
+  margin-bottom: 50px;
+
+  &:before {
+    content: " ";
+    background: url(../images/dealers-h1.png) 0 0 no-repeat;
+    width: 32px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -18px;
+  }
 }
 
-.spotlight .wrapper .blocks table:first-of-type td:nth-child(3) a {
-  padding-top: 180px;
-}
+// Spotlight Blocks
+// ===================================
+.spotlight .blocks table {
 
-.spotlight .wrapper .blocks table td img {
-  vertical-align: top;
-}
+  &:first-of-type td:nth-child(3) a {
+    padding-top: 180px;
+  }
 
-.spotlight .blocks table:first-of-type td:nth-child(1):hover a,
-.spotlight .blocks table:first-of-type td:nth-child(2):hover a {
-  padding-top: 180px;
-}
+  &:first-of-type td:nth-child(1):hover a,
+  &:first-of-type td:nth-child(2):hover a {
+    padding-top: 180px;
+  }
 
-.spotlight .wrapper .blocks table td .hover {
-  margin-top: -50px;
+  &:nth-child(2n+2) td a {
+    padding-top: 160px;
+  }
+
+  td {
+    vertical-align: top;
+
+    p {
+      font-size: 20px;
+      font-family: $ff2;
+    }
+
+    a {
+      padding-top: 180px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-family: $ff1;
+    }
+
+    img {
+      vertical-align: top;
+    }
+  }
+
 }
