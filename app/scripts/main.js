@@ -75,7 +75,7 @@ $(function() {
     });
   }
 
-  // Spotlight page News-block SLider
+  // Spotlight page SLider
 
   if ($('.inside').length !== 0) {
     $('.inside .bxslider').bxSlider({

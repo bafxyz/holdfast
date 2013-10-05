@@ -244,8 +244,8 @@
     }
   }
 
-  // SC changes for about page
-  .about .product-options button {
+  // About page
+  .about .about-options a {
     display: block;
     margin: 2em 4%;
     width: 92%;
@@ -253,15 +253,6 @@
 
   .social ul li {
     margin: 10px 25px;
-  }
-
-  footer.desktop-tablet-hide {
-    margin-top: 80px;
-
-    td {
-      padding-bottom: 2em;
-      text-align: center;
-    }
   }
 
   // Spotlight inside page styles

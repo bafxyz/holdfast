@@ -2,20 +2,20 @@
 
 .spotlight h1 {
   position: relative;
-  font-size: 20px;
-  text-align: center;
   margin-bottom: 50px;
+  text-align: center;
+  font-size: 20px;
 
   &:before {
-    content: " ";
-    background: url(../images/dealers-h1.png) 0 0 no-repeat;
-    width: 32px;
-    height: 1px;
-    display: block;
     position: absolute;
     top: -10px;
     left: 50%;
+    display: block;
     margin-left: -18px;
+    width: 32px;
+    height: 1px;
+    background: url(../images/dealers-h1.png) 0 0 no-repeat;
+    content: " ";
   }
 }
 

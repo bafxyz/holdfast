@@ -23,7 +23,7 @@
     padding-bottom: 15px;
     color: #fff;
     letter-spacing: 7px;
-    font: 26px bebasregular;
+    font: 26px $ff1;
   }
 
   .product-image {
@@ -44,8 +44,8 @@
       top: 50%;
       left: -23px;
       z-index: 9999;
-      margin-top: -5px;
       display: inline-block;
+      margin-top: -5px;
       width: 7px;
       height: 14px;
       background: url(../images/slider-nav.png) 0 0 no-repeat;
@@ -53,9 +53,9 @@
     }
 
     .bx-next {
-      background-position: 100% 0;
-      left: auto;
       right: -23px;
+      left: auto;
+      background-position: 100% 0;
     }
   }
 
@@ -91,7 +91,7 @@
     padding-top: 20px;
     padding-bottom: 5px;
     font-size: 20px;
-    font-family: bebasregular;
+    font-family: $ff1;
   }
 
   h4 {
@@ -100,6 +100,6 @@
     color: #AC815F;
     letter-spacing: 4px;
     font-size: 12px;
-    font-family: bebasregular;
+    font-family: $ff1;
   }
 }

@@ -1,35 +1,5 @@
 @import "variables";
 
-.product header {
-  margin-bottom: 40px;
-}
-
-footer td {
-  padding: 0px 0 60px 0;
-}
-
-footer td a {
-  text-decoration: none;
-}
-
-// Back to top
-// ===================================
-.back-to-top {
-  position: relative;
-  top: 50px;
-  text-align: center;
-
-  p {
-    background: none;
-  }
-
-  a {
-    display: inline-block;
-    padding: 0 50px;
-    background-color: #fff;
-  }
-}
-
 // Sizes
 // ===================================
 .product-text {
@@ -106,7 +76,7 @@ footer td a {
   }
 }
 
-.product-options {
+.about .heading {
   margin-bottom: 30px;
   text-align: center;
 
@@ -125,20 +95,27 @@ footer td a {
   h1 {
     margin-bottom: 30px;
   }
+}
 
-  button {
-    margin: 0 20px;
-    padding: 0 17px;
-    height: 42px;
-    border: 1px solid #D9D9D9;
-    background-color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    font-family: $main-font;
+.about-options {
+  text-align: center;
+}
 
-    &:hover{
-      background: url(../images/button-hover.jpg) repeat-x;
-      color: #fff;
-    }
+.about-options a {
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0 17px;
+  height: 42px;
+  border: 1px solid #D9D9D9;
+  background-color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-family: $main-font;
+  line-height: 42px;
+
+  &:hover{
+    background: url(../images/button-hover.jpg) repeat-x;
+    color: #fff;
   }
 }
