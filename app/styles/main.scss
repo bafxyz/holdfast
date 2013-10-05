@@ -907,7 +907,7 @@ header {
 
 // News
 // ===================================
-.news {
+.news-block {
   h2 {
     background: url(../images/title-line.png) 0 50% repeat-x;
     text-align: center;
@@ -1093,9 +1093,9 @@ footer {
 
 @import "product";
 // @import "about";
-// @import "spotlight";
+@import "spotlight";
 // @import "spotlight_inside";
 @import "dealers";
-// @import "news";
+@import "news";
 // @import "products";
 @import "media-queries";

@@ -1,19 +1,54 @@
 @import "../bower_components/susy/sass/susy";
 @import "variables";
 
-.product header {
-  margin-bottom: 40px;
+.news {
+  h3 {
+    padding-bottom: 20px;
+    color: #80532b;
+    font-size: 20px;
+    font-family: $ff1;
+  }
+
+  p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+
+    span {
+      color: #80532b;
+    }
+
+    a {
+      color: #80532b;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
-footer td {
-  padding: 0 0 60px 0;
-}
+.news .heading {
+  text-align: center;
 
-footer td a {
-  text-decoration: none;
-}
+  h1 {
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 30px;
 
-.news .product-options {
+    &:before {
+      content: " ";
+      background: url(../images/dealers-h1.png) 0 0 no-repeat;
+      width: 32px;
+      height: 1px;
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      margin-left: -18px;
+    }
+  }
+
   h2 {
     background: none;
     letter-spacing: 3px;
@@ -22,27 +57,9 @@ footer td a {
   }
 }
 
-// Back to top
+// News
 // ===================================
-.back-to-top {
-  position: relative;
-  top: 50px;
-  text-align: center;
-
-  p {
-    background: none;
-  }
-
-  a {
-    display: inline-block;
-    padding: 0 50px;
-    background-color: #fff;
-  }
-}
-
-// dealersWrapper
-// ===================================
-.newsContainer {
+.news-container {
   margin-top: 60px;
   padding: 0 0 30px 0;
 
@@ -51,7 +68,7 @@ footer td a {
     background: url(../images/bd-h.png) 0 100% repeat-x;
 
     .column {
-      @include span-columns(6,14);
+      @include span-columns(6, 14);
       padding-top: 60px;
       height: 364px;
 
@@ -80,43 +97,17 @@ footer td a {
     }
   }
 
-  h3 {
-    padding-bottom: 20px;
-    color: #80532B;
-    font-size: 20px;
-    font-family: $ff1;
-  }
-
-  p {
-    margin-bottom: 20px;
-    line-height: 1.5;
-
-    span {
-      color: #80532B;
-    }
-
-    a {
-      color: #80532B;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
   .image {
     margin-bottom: 20px;
     height: 74px;
   }
 
-  a.button {
+  .button {
     float: left;
     margin-top: 40px;
-    padding: 0 17px;
-    padding-top: 12px;
+    padding: 12px 17px 0 17px;
     height: 42px;
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
     background-color: #fff;
     text-decoration: none;
     text-transform: uppercase;

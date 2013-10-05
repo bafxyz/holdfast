@@ -61,33 +61,37 @@ $(function() {
     }
   }
 
-  // News SLider
+  // Home page News-block SLider
 
-  $('.bxslider').bxSlider({
-    auto: true,
-    autoControls: false,
-    pager: false,
-    minSlides: 1,
-    maxSlides: 1,
-    moveSlides: 1,
-    slideMargin: 1
-  });
+  if ($('.bxslider').length !== 0) {
+    $('.bxslider').bxSlider({
+      auto: true,
+      autoControls: false,
+      pager: false,
+      minSlides: 1,
+      maxSlides: 1,
+      moveSlides: 1,
+      slideMargin: 1
+    });
+  }
 
-  // Slider
+  // Home page and Product page Slider
 
-  $('.rslides').responsiveSlides({
-    auto: true,
-    pager: true,
-    nav: false,
-    speed: 500,
-    before: function() {},
-    after: function() {
-      var currentSlide = $('.rslides_here').index();
-      sliderWrapper.children('.caption').removeClass('here');
-      sliderWrapper.children('.caption').eq(currentSlide).addClass('here');
-      sloganPosition();
-    }
-  });
+  if ($('.rslides').length !== 0) {
+    $('.rslides').responsiveSlides({
+      auto: true,
+      pager: true,
+      nav: false,
+      speed: 500,
+      before: function() {},
+      after: function() {
+        var currentSlide = $('.rslides_here').index();
+        sliderWrapper.children('.caption').removeClass('here');
+        sliderWrapper.children('.caption').eq(currentSlide).addClass('here');
+        sloganPosition();
+      }
+    });
+  }
 
   // Init
 
