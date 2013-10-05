@@ -5,10 +5,10 @@
 }
 
 footer td {
-padding: 0px 0 60px 0;
+  padding: 0px 0 60px 0;
 }
 
-footer td a{
+footer td a {
   text-decoration: none;
 }
 
@@ -54,11 +54,11 @@ footer td a{
     }
   }
 
-  h3{
-    font-family: $ff2;
+  h3 {
     font-size: 20px;
+    font-family: $ff2;
 
-    span{
+    span {
       color: #80532B;
     }
   }
@@ -66,8 +66,8 @@ footer td a{
   p {
     margin-bottom: 20px;
     line-height: 1.5;
-    
-    span{
+
+    span {
       color: #80532B;
     }
 
@@ -127,14 +127,14 @@ footer td a{
   }
 
   button {
+    margin: 0 20px;
     padding: 0 17px;
     height: 42px;
     border: 1px solid #D9D9D9;
     background-color: #fff;
     text-transform: uppercase;
-    font-family: $main-font;
     letter-spacing: 0.5em;
-    margin: 0 20px;
+    font-family: $main-font;
 
     &:hover{
       background: url(../images/button-hover.jpg) repeat-x;

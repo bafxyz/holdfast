@@ -5,10 +5,10 @@
 }
 
 footer td {
-padding: 0px 0 60px 0;
+  padding: 0 0 60px 0;
 }
 
-footer td a{
+footer td a {
   text-decoration: none;
 }
 
@@ -32,32 +32,41 @@ footer td a{
 
 // Blocks
 // ===================================
-.spotlight .wrapper .blocks table td{
+.spotlight .wrapper .blocks table td {
   vertical-align: top;
 }
+
 .spotlight .wrapper .blocks table td a {
   padding-top: 180px;
 }
-.spotlight .wrapper .blocks table:nth-child(2n+2) td a{
-  padding-top: 160px
+
+.spotlight .wrapper .blocks table:nth-child(2n+2) td a {
+  padding-top: 160px;
 }
+
 .spotlight .wrapper .blocks table td h2 {
   font-size: 24px;
   font-family: bebasregular;
 }
+
 .spotlight .wrapper .blocks table td p {
   font-size: 20px;
   font-family: ACaslonPro-SemiboldItalic;
 }
+
 .spotlight .wrapper .blocks table:first-of-type td:nth-child(3) a {
   padding-top: 180px;
 }
-.spotlight .wrapper .blocks table td img{
+
+.spotlight .wrapper .blocks table td img {
   vertical-align: top;
 }
-.blocks table:first-of-type td:nth-child(2):hover a, .blocks table:first-of-type td:nth-child(1):hover a {
-padding-top: 180px;
+
+.spotlight .blocks table:first-of-type td:nth-child(1):hover a,
+.spotlight .blocks table:first-of-type td:nth-child(2):hover a {
+  padding-top: 180px;
 }
-.spotlight .wrapper .blocks table td .hover{
+
+.spotlight .wrapper .blocks table td .hover {
   margin-top: -50px;
 }

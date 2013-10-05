@@ -1,42 +1,68 @@
 $(function() {
 
   var sliderWrapper = $('.slider-wrapper');
-  var slider =  sliderWrapper.children('.rslides');
+  var slider = sliderWrapper.children('.rslides');
   var slogan = $('.slogan');
   var menu = $('.m-menu');
 
   // Caption positioning
+
   function sliderCaption() {
-    if( $(document).width() < 768 ) {
-      if ( sliderWrapper.children('.caption').length === 0 ) {
+    if ($(document).width() < 768) {
+      if (sliderWrapper.children('.caption').length === 0) {
         slider.find('.caption').clone().appendTo(sliderWrapper);
       }
     } else {
-      if ( sliderWrapper.children('.caption').length > 0 ) {
+      if (sliderWrapper.children('.caption').length > 0) {
         sliderWrapper.children('.caption').remove();
       }
     }
   }
 
   // Slider positioning
+
   function sloganPosition() {
     slogan.css('margin-top', sliderWrapper.height());
   }
 
   // Mobile menu
-  function mobileMenu () {
+
+  function mobileMenu() {
     if ($(document).width() > 768) {
       menu.hide();
     } else {
       menu.css('height', $(window).height());
 
-      if (menu.find('ul').length === 0 ) {
+      if (menu.find('ul').length === 0) {
         $('.menu > ul').clone().appendTo(menu);
       }
     }
   }
 
+  // Dealers blocks equal height
+
+  function dealerBlocksHeight() {
+    if ($('.map').length !== 0) {
+      if ($(document).width() > 1000) {
+        $('.map .row').each(function() {
+          var highestBox = 0;
+
+          $('.text', this).each(function() {
+            if ($(this).height() > highestBox) {
+              highestBox = $(this).height();
+            }
+          });
+
+          $('.text', this).height(highestBox);
+        });
+      } else {
+        $('.map .row .text').height('auto');
+      }
+    }
+  }
+
   // News SLider
+
   $('.bxslider').bxSlider({
     auto: true,
     autoControls: false,
@@ -48,13 +74,13 @@ $(function() {
   });
 
   // Slider
+
   $('.rslides').responsiveSlides({
     auto: true,
     pager: true,
     nav: false,
     speed: 500,
-    before: function() {
-    },
+    before: function() {},
     after: function() {
       var currentSlide = $('.rslides_here').index();
       sliderWrapper.children('.caption').removeClass('here');
@@ -64,11 +90,14 @@ $(function() {
   });
 
   // Init
+
   sloganPosition();
   mobileMenu();
+  dealerBlocksHeight();
 
   // SLider Labels
-  sliderWrapper.find('.rslides_tabs li').each(function (index) {
+
+  sliderWrapper.find('.rslides_tabs li').each(function(index) {
     $(this).find('a').html(slider.find('li').eq(index).find('.name').html());
   });
 
@@ -76,9 +105,11 @@ $(function() {
     sliderCaption();
     sloganPosition();
     mobileMenu();
+    dealerBlocksHeight();
   });
 
   // Placeholder for IE
+
   $('[placeholder]').focus(function() {
     var input = $(this);
     if (input.val() === input.attr('placeholder')) {
@@ -101,55 +132,19 @@ $(function() {
   });
 
   // Back to top
+
   $('.top-link').click(function(e) {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 'slow');
+    $('html, body').animate({
+      scrollTop: 0
+    }, 'slow');
   });
 
   // Toggle menu
-  $('.m-menu-btn').click(function (e) {
+
+  $('.m-menu-btn').click(function(e) {
     e.preventDefault();
     menu.toggle();
   });
-
-  //Blocks of equal height
-  var currentTallest = 0,
-     currentRowStart = 0,
-     rowDivs = new Array(),
-     $el,
-     topPosition = 0;
-
- $('.dealers .row .columns p').each(function() {
-
-   $el = $(this);
-   topPostion = $el.position().top;
-   
-   if (currentRowStart != topPostion) {
-
-     // we just came to a new row.  Set all the heights on the completed row
-     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-       rowDivs[currentDiv].height(currentTallest);
-     }
-
-     // set the variables for the new row
-     rowDivs.length = 0; // empty the array
-     currentRowStart = topPostion;
-     currentTallest = $el.height();
-     rowDivs.push($el);
-
-   } else {
-
-     // another div on the current row.  Add it to the list and check if it's taller
-     rowDivs.push($el);
-     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-
-  }
-   
-  // do the last row
-   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-     rowDivs[currentDiv].height(currentTallest);
-   }
-   
- });
 
 });

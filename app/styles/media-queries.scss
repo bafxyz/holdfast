@@ -10,12 +10,27 @@
     padding: 10px;
   }
 
-
   .product .rslides_here {
 
     a {
       background: url(../images/slider-circle.png) 50% 50% no-repeat;
     }
+  }
+
+  .product-sizes ul li {
+    padding-bottom: 10px;
+  }
+
+  .product .slogan {
+    margin-bottom: 10px;
+  }
+
+  .product-text {
+    padding: 0;
+  }
+
+  .leather-options {
+    margin-top: 30px;
   }
 
   .home .rslides_tabs {
@@ -229,27 +244,62 @@
     }
   }
 
-  .product-sizes ul li {
-    padding-bottom: 10px;
+  // SC changes for about page
+  .about .product-options button {
+    display: block;
+    margin: 2em 4%;
+    width: 92%;
   }
 
-  .product .slogan {
-    margin-bottom: 10px;
+  .social ul li {
+    margin: 10px 25px;
   }
 
-  .product-text {
-    padding: 0;
+  footer.desktop-tablet-hide {
+    margin-top: 80px;
+
+    td {
+      padding-bottom: 2em;
+      text-align: center;
+    }
   }
 
-  .leather-options {
-    margin-top: 30px;
+  // SC Spotlight inside page styles
+  .bx-controls {
+    display: none;
   }
+
+  .leftWrapper {
+    @include span-columns(3 omega, 3);
+    margin-top: 40px;
+    background: #231F20;
+  }
+
+  .rightWrapper {
+    @include span-columns(3 omega, 3);
+  }
+
+  // SC styles for news page
+  .news .row .column img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .news .row .column .image {
+    height: auto;
+  }
+
 }
+
 
 // ==============================================//
 // Tablet styles                                 //
 // ==============================================//
 @include at-breakpoint($mobile-view 6 $tablet-view) {
+  .tablet-hide{
+    display: none;
+  }
+
   .menu {
     > ul > li {
       margin-right: 30px;
@@ -300,12 +350,47 @@
       display: none;
     }
   }
+
+  //SC styles for Spotlight page
+  .spotlight .wrapper .blocks table td .hover {
+    margin-top: -70px;
+  }
+
+  //SC styles for Spotlight inside page
+  .leftWrapper {
+    @include span-columns(3 omega, 3);
+    margin-top: 40px;
+    background: #231F20;
+
+    img:first-child {
+      float: left;
+      width: 50%;
+    }
+
+    .description {
+      float: right;
+      width: 50%;
+      img {
+        float: none;
+        width :auto;
+      }
+    }
+  }
+
+  .rightWrapper {
+    @include span-columns(3 omega, 3);
+  }
 }
 
 // ==============================================//
 // Mobile and tablet                             //
 // ==============================================//
 @include at-breakpoint(6 $tablet-view) {
+
+  .tablet-mobile-hide {
+    display: none;
+  }
+
   // Social
   .social {
     .social-col1,
@@ -365,8 +450,69 @@
     }
   }
 
+  .product .social {
+    display: none;
+  }
+
+  // SC styles for news page
+  .news .row {
+    background: none;
+
+    &:first-child .column {
+      padding-top: 40px;
+    }
+
+    .column {
+      @include span-columns(1 omega, 1);
+      background: url(../images/bd-h.png) 0 100% repeat-x;
+      text-align: center;
+
+      a.button {
+        display: inline-block;
+        float: none;
+      }
+
+      &:last-child {
+        @include span-columns(1 omega, 1);
+      }
+    }
+  }
+
+  .news .row .column.tablet-mobile-hide {
+    display: none;
+  }
+
+  // Dealers page
+  .dealers .row .column,
+  .dealers .row .column:last-child {
+    @include span-columns(1 omega, 1);
+    background: none;
+  }
+
+  .dealers .row {
+    padding-top: 30px;
+    background: none;
+
+    &:nth-of-type(2) .column {
+      padding-top: 10px;
+      background: url(../images/bd-h.png) 0 0 repeat-x;
+    }
+
+    &:last-of-type {
+      background: url(../images/bd-h.png) 0 0 repeat-x;
+    }
+
+    .column {
+      padding-bottom: 0;
+    }
+  }
 }
 
+@include at-breakpoint(6 810px) {
+  .home .rslides_tabs {
+    display: none;
+  }
+}
 
 // ==============================================//
 // Tablet and Desktop                            //
@@ -374,6 +520,10 @@
 @include at-breakpoint($mobile-view 6) {
   .product-image a {
     padding-top: 17%;
+  }
+
+  .desktop-tablet-hide {
+    display: none;
   }
 
   .product .social {
@@ -404,7 +554,6 @@
     }
   }
 }
-
 
 // ==============================================//
 // Other media                                   //

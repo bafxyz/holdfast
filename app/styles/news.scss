@@ -1,0 +1,132 @@
+@import "../bower_components/susy/sass/susy";
+@import "variables";
+
+.product header {
+  margin-bottom: 40px;
+}
+
+footer td {
+  padding: 0 0 60px 0;
+}
+
+footer td a {
+  text-decoration: none;
+}
+
+.news .product-options {
+  h2 {
+    background: none;
+    letter-spacing: 3px;
+    font: 14px bebasregular;
+    font-weight: normal;
+  }
+}
+
+// Back to top
+// ===================================
+.back-to-top {
+  position: relative;
+  top: 50px;
+  text-align: center;
+
+  p {
+    background: none;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 50px;
+    background-color: #fff;
+  }
+}
+
+// dealersWrapper
+// ===================================
+.newsContainer {
+  margin-top: 60px;
+  padding: 0 0 30px 0;
+
+  .row {
+    @include container;
+    background: url(../images/bd-h.png) 0 100% repeat-x;
+
+    .column {
+      @include span-columns(6,14);
+      padding-top: 60px;
+      height: 364px;
+
+      .text {
+        overflow: hidden;
+        height: 85px;
+      }
+    }
+
+    &:first-child .column {
+      padding-top: 0px;
+      height: 324px;
+    }
+
+    &:last-child {
+      background: none;
+    }
+
+    .column:last-child {
+      @include span-columns(6 omega, 14);
+    }
+
+    .column:nth-child(2) {
+      @include span-columns(2, 14);
+      background: url(../images/separator.gif) repeat-y center;
+    }
+  }
+
+  h3 {
+    padding-bottom: 20px;
+    color: #80532B;
+    font-size: 20px;
+    font-family: $ff1;
+  }
+
+  p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+
+    span {
+      color: #80532B;
+    }
+
+    a {
+      color: #80532B;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .image {
+    margin-bottom: 20px;
+    height: 74px;
+  }
+
+  a.button {
+    float: left;
+    margin-top: 40px;
+    padding: 0 17px;
+    padding-top: 12px;
+    height: 42px;
+    border: 1px solid #D9D9D9;
+    background-color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 12px;
+    font-family: $main-font;
+
+    &:hover {
+      background: url(../images/button-hover.jpg) repeat-x;
+      color: #fff;
+    }
+  }
+}
