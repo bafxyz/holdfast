@@ -1,0 +1,105 @@
+@import "../bower_components/susy/sass/susy";
+@import "variables";
+
+// Content
+// ===================================
+.inside .contentWrapper {
+  @include container;
+}
+
+.inside .leftWrapper {
+  @include span-columns(1, 3);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.inside .rightWrapper {
+  @include span-columns(2 omega, 3);
+
+  .product-image h2 {
+    padding-bottom: 15px;
+    color: #fff;
+    letter-spacing: 7px;
+    font: 26px $ff1;
+  }
+
+  .product-image {
+    margin-bottom: 10px;
+  }
+
+  .text {
+    padding-top: 30px;
+  }
+
+  .bx-wrapper {
+    position: relative;
+  }
+
+  .bx-controls-direction {
+    a {
+      position: absolute;
+      top: 50%;
+      left: -23px;
+      z-index: 9999;
+      display: inline-block;
+      margin-top: -5px;
+      width: 7px;
+      height: 14px;
+      background: url(../images/slider-nav.png) 0 0 no-repeat;
+      text-indent: -9999px;
+    }
+
+    .bx-next {
+      right: -23px;
+      left: auto;
+      background-position: 100% 0;
+    }
+  }
+
+}
+
+.inside .description {
+  padding: 40px 0;
+  width: 100%;
+  background: #231F20;
+  color: #fff;
+  text-align: center;
+
+  img {
+    width: auto;
+    height: auto;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  ul {
+    width: 100%;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      padding: 10px 5px;
+    }
+  }
+
+  h3 {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-family: $ff1;
+  }
+
+  h4 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color: #AC815F;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-family: $ff1;
+  }
+}

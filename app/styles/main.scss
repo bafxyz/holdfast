@@ -329,8 +329,6 @@ textarea {
   -webkit-backface-visibility: hidden;
 }
 
-
-
 .home .slider-wrapper .rslides li:nth-child(1),
 .home .slider-wrapper .rslides li:nth-child(3) {
   position: relative;
@@ -451,6 +449,7 @@ textarea {
       color: #000;
     }
   }
+
   .rslides_here + li {
     border: none;
   }
@@ -492,7 +491,7 @@ p {
 }
 
 a {
-  color: #0C0D0F;
+  color: #0c0d0f;
 }
 
 a:hover,
@@ -522,7 +521,7 @@ header {
   }
 
   .header-col1 {
-    @include span-columns(2,6);
+    @include span-columns(2, 6);
     padding-top: 45px;
     padding-bottom: 35px;
     background: url(../images/bd-h.png) 0 100% repeat-x;
@@ -531,13 +530,13 @@ header {
   }
 
   .header-col2 {
-    @include span-columns(2,6);
+    @include span-columns(2, 6);
     padding-top: 35px;
     text-align: center;
   }
 
   .header-col3 {
-    @include span-columns(2 omega,6);
+    @include span-columns(2 omega, 6);
     padding-top: 45px;
     padding-bottom: 35px;
     background: url(../images/bd-h.png) 0 100% repeat-x;
@@ -843,6 +842,7 @@ header {
     a {
       padding-top: 34%;
     }
+
     p {
       margin-bottom: 8px;
     }
@@ -891,11 +891,11 @@ header {
       font-family: $ff2;
     }
   }
+}
 
-   table:last-of-type td:nth-child(1):hover {
-    a {
-      padding-top: 4.7%;
-    }
+.home .blocks {
+  table:last-of-type td:nth-child(1):hover a {
+    padding-top: 4.7%;
   }
 
   table:last-of-type td:nth-child(2):hover {
@@ -907,7 +907,7 @@ header {
 
 // News
 // ===================================
-.news {
+.news-block {
   h2 {
     background: url(../images/title-line.png) 0 50% repeat-x;
     text-align: center;
@@ -994,6 +994,7 @@ header {
   .social-col1 {
     @include span-columns(3, 6);
   }
+
   .social-col2 {
     @include span-columns(3 omega, 6);
   }
@@ -1009,22 +1010,25 @@ header {
 
   form {
     float: right;
-    color: #0C0D0F;
+    color: #0c0d0f;
     text-transform: uppercase;
     font-size: 9px;
     font-family: $main-font;
 
     ::-webkit-input-placeholder { /* WebKit browsers */
-      color: #0C0D0F;
+      color: #0c0d0f;
     }
+
     :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: #0C0D0F;
+      color: #0c0d0f;
     }
+
     ::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: #0C0D0F;
+      color: #0c0d0f;
     }
+
     :-ms-input-placeholder { /* Internet Explorer 10+ */
-      color: #0C0D0F;
+      color: #0c0d0f;
     }
 
     input {
@@ -1032,7 +1036,7 @@ header {
       margin: 0;
       height: 30px;
       border: 1px solid #BABABA;
-      color: #0C0D0F;
+      color: #0c0d0f;
       text-transform: uppercase;
       font-size: 11px;
       font-family: $main-font;
@@ -1089,4 +1093,9 @@ footer {
 
 @import "product";
 // @import "products";
+@import "about";
+@import "spotlight";
+@import "spotlight_inside";
+@import "dealers";
+@import "news";
 @import "media-queries";
