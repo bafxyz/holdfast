@@ -1,0 +1,148 @@
+@import "variables";
+
+.products {
+
+  h1 {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 20px;
+
+    &:before {
+      position: absolute;
+      top: -15px;
+      left: 0;
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: url(../images/dealers-h1.png) 0 0 no-repeat;
+      content: " ";
+    }
+  }
+}
+
+
+
+.products-block {
+  width: 100%;
+}
+
+.products-left {
+  float: left;
+  width: 180px;
+
+  h1 {
+    margin-bottom: 60px;
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: $ff1;
+  }
+}
+
+.products-right {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-left: 180px;
+
+  form {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  select {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px 10px 15px;
+    outline: none;
+    border: 1px solid #D9D9D9;
+    text-transform: uppercase;
+    font-family: $main-font;
+    cursor: pointer;
+  }
+
+  label {
+    position:relative;
+  }
+
+  label:after {
+    position: absolute;
+    top: -11px;
+    right: 1px;
+    width:40px;
+    height:38px;
+    background: #fff url(../images/select.png) 50% 50% no-repeat;
+    content:' ';
+    pointer-events: none;
+  }
+
+  label:before {
+    position: absolute;
+    top: -11px;
+    right: 1px;
+    display:block;
+    width: 40px;
+    height: 38px;
+    background-color: #fff;
+    content:'';
+    pointer-events: none;
+  }
+
+  .items table {
+    margin: 30px auto 0 auto;
+    width: 100%;
+    max-width: 372px;
+
+    td {
+      vertical-align: middle;
+      font-size: 12px;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    tr:last-child td:last-child {
+      vertical-align: bottom;
+
+      img {
+        float: right;
+      }
+    }
+  }
+}
+
+.products .items {
+  width: 100%;
+  background: url(../images/separator.gif) 0 0 repeat-y;
+  padding-left: 40px;
+  overflow: hidden;
+
+  .item {
+    @include span-columns(1, 2);
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:nth-of-type(2n+2) {
+      @include omega;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

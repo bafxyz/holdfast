@@ -286,6 +286,39 @@
       max-width: 360px;
     }
 
+  .products-right label,
+  .products-right select {
+    width: 100%;
+    max-width: 372px;
+  }
+
+  .products .items {
+
+    .item {
+      @include span-columns(2 omega, 2);
+      text-align: center;
+
+      &:nth-of-type(2n+2) {
+        @include remove-omega;
+      }
+
+      table td {
+        display: block;
+        text-align: center;
+        padding-bottom: 10px;
+
+        &:last-child {
+          text-align: center;
+        }
+      }
+
+      table tr:last-child td:last-child img {
+        float: none;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+  }
 } // END of Mobile styles
 
 
@@ -372,6 +405,27 @@
   .inside .rightWrapper {
     @include span-columns(3 omega, 3);
   }
+
+  .products-right {
+    position: relative;
+
+    form {
+      position: absolute;
+      top: -15px;
+      right: 0;
+      text-align: right;
+    }
+
+    .items {
+      margin-top: 70px;
+    }
+  }
+
+  .products-right label,
+  .products-right select {
+    min-width: 255px;
+  }
+
 } // END of Tablet styles
 
 // ==============================================//
@@ -508,6 +562,30 @@
       padding-bottom: 0;
     }
   }
+
+
+  .products h1 {
+    text-align: center;
+
+     &:before {
+      left: 50%;
+      margin-left: -18px;
+    }
+  }
+
+  .products-left {
+    display: none;
+  }
+
+  .products-right {
+    margin-left: 0;
+
+    .items {
+      padding-left: 0;
+      background: none;
+    }
+  }
+
 } // END of Mobile and Tablet styles
 
 @include at-breakpoint(6 810px) {
@@ -558,6 +636,10 @@
 
   .cart-popup {
     max-width: 360px;
+  }
+
+  .products-right .heading {
+    display: none;
   }
 } // END of Desktop styles
 

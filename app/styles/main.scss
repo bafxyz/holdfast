@@ -136,6 +136,10 @@ textarea {
   margin: auto;
 }
 
+.clear {
+  clear: both;
+}
+
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -1170,7 +1174,7 @@ footer {
 }
 
 @import "product";
-// @import "products";
+@import "products";
 @import "about";
 @import "spotlight";
 @import "spotlight_inside";
