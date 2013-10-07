@@ -148,6 +148,80 @@ textarea {
 @import "../bower_components/susy/sass/susy";
 @import "variables";
 
+// Cart popup
+// ===================================
+.cart-popup {
+  position: absolute;
+  top: 29px;
+  left: 16px;
+  z-index: 10;
+  display: none;
+  padding: 15px 15px 0 15px;
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #fff;
+
+  table {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  table td {
+    padding-right: 10px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    line-height: normal;
+
+    &:nth-child(3) {
+      text-transform: uppercase;
+      font-size: 9px;
+      font-family: $ff1;
+
+      span {
+        font-size: 9px;
+      }
+    }
+
+    &:last-child {
+      text-align: right;
+      padding-right: 0;
+
+      a img {
+        vertical-align: middle;
+      }
+    }
+
+    span {
+      padding-right: 10px;
+    }
+  }
+
+  .cart-buttons {
+    overflow: hidden;
+    margin-right: -15px;
+
+    a {
+      padding: 15px 20px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:first-child {
+        float: left;
+        padding-left: 0;
+      }
+
+      &:last-child {
+        float: right;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+      }
+    }
+  }
+}
+
 // Mobile menu
 // ===================================
 .m-menu,
@@ -537,6 +611,7 @@ header {
 
   .header-col3 {
     @include span-columns(2 omega, 6);
+    position: relative;
     padding-top: 45px;
     padding-bottom: 35px;
     background: url(../images/bd-h.png) 0 100% repeat-x;
@@ -545,19 +620,22 @@ header {
     font-size: 12px;
     font-family: $main-font;
 
-    a {
+    > p a,
+    .cart-popup > p a {
       position: relative;
       height: 22px;
       vertical-align: middle;
       text-decoration: none;
     }
 
-    img {
+    p img,
+    .cart-popup > p img {
       margin-right: 10px;
       vertical-align: middle;
     }
 
-    span {
+    p span,
+    .cart-popup > p span {
       position: absolute;
       top: -3px;
       left: 6px;

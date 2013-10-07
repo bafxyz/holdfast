@@ -96,7 +96,9 @@
     }
 
     .header-col3 {
-      a {
+      position: relative;
+
+      > p a {
         border: 0;
         background-color: transparent;
         color: transparent;
@@ -109,7 +111,7 @@
         font-size: 11px;
       }
 
-      img:last-child {
+      > img:last-child {
         display: none;
       }
     }
@@ -280,6 +282,10 @@
     height: auto;
   }
 
+    .cart-popup {
+      max-width: 360px;
+    }
+
 } // END of Mobile styles
 
 
@@ -372,6 +378,16 @@
 // Mobile and tablet                             //
 // ==============================================//
 @include at-breakpoint(6 $tablet-view) {
+  .cart-popup {
+    max-width: auto;
+    width: auto;
+    left: auto;
+    right: 0;
+
+    table td {
+      white-space: nowrap;
+    }
+  }
 
   .tablet-mobile-hide {
     display: none;
@@ -538,6 +554,10 @@
         display: none;
       }
     }
+  }
+
+  .cart-popup {
+    max-width: 360px;
   }
 } // END of Desktop styles
 

@@ -163,4 +163,10 @@ $(function() {
     menu.toggle();
   });
 
+
+  // Cart popup
+  $('.cart-btn').click(function (e) {
+    e.preventDefault();
+    $('.cart-popup').toggle();
+  });
 });
