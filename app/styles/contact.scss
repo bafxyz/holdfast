@@ -1,6 +1,6 @@
 @import "variables";
 
-// 404 Message
+// Contact
 // ===================================
 .contact-block {
   text-align: center;
@@ -71,17 +71,14 @@
       padding: 0 35px;
       height: 30px;
       border: 1px solid #D9D9D9;
+      background: url(../images/button-hover.jpg) repeat-x;
       background-color: #fff;
+      color: #fff;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.5em;
       font-family: proxima_novasemibold;
       line-height: 30px;
-
-      &:hover{
-        background: url(../images/button-hover.jpg) repeat-x;
-        color: #fff;
-      }
     }
   }
 }
