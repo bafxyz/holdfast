@@ -586,6 +586,20 @@
     }
   }
 
+  .checkout .contact-email table td {
+    display: block;
+    width: 100%;
+
+    &:last-child {
+      padding-left: 0;
+      padding-top: 30px;
+    }
+  }
+
+  .checkout .contact-email {
+    text-align: center;
+  }
+
 } // END of Mobile and Tablet styles
 
 @include at-breakpoint(6 810px) {

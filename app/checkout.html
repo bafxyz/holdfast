@@ -144,10 +144,86 @@
       <div class="bd-vertical">
         <div class="calculate-shipping">
           CALCULATE SHIPPING
+          <form action="#">
+            <table>
+              <tr>
+                <td>
+                  <label for="country">
+                    <select name="country" id="country">
+                      <option value="United kingdom">United kingdom</option>
+                    </select>
+                  </label> <br>
+                  <input type="text" name="zip" id="zip" placeholder="Enter zip code"> <br>
+                  <input type="submit" value="Check shipping taxes"> <br>
+                  <input type="radio" name="postal" id="dhl"> DHL Express at  $35<br>
+                  <input type="radio" name="postal" id="usps"> USPS Express at  $86<br>
+                </td>
+                <td>
+                  <p>
+                    Shipping  <span>$ 35</span> <br>
+                  </p>
+                  <p>
+                    Taxes <span>$ 110</span> <br>
+                  </p>
+                  <p>
+                    Total <span>$ 1850</span> <br>
+                  </p>
+                  <p class="agreement">
+                    I agree to the terms and refund policy <input type="checkbox" name="agreement" id="agreement">
+                  </p>
+                </td>
+              </tr>
+            </table>
 
+          </form>
         </div>
       </div>
     </div>
+
+    <div class="bd-horisontal">
+      <div class="bd-vertical">
+        <div class="contact-email">
+          YOUR CONTACT EMAIL:
+          <form action="#">
+            <input type="text" name="email" id="email" placeholder="EMAIL">
+            <table>
+              <tr>
+                <td>
+                  <h2>Billing address</h2>
+                  <label for="fname"><span>First Name</span><input type="text" name="fname" id="fname"><br></label>
+                  <label for="lname"><span>Last Name</span><input type="text" name="lname" id="lname"><br></label>
+                  <label for="company"><span>Company</span><input type="text" name="company" id="company"><br></label>
+                  <label for="address"><span>Address</span><input type="text" name="address" id="address"><br></label>
+                  <label for="address2"><span>Address 2</span><input type="text" name="address2" id="address2"><br></label>
+                  <label for="city"><span>City</span><input type="text" name="city" id="city" ><br></label>
+                  <label for="zip2"><span>Postal / zip <br>code</span><input type="text" name="zip2" id="zip2"><br></label>
+                  <label for="country2"><span>Country</span><input type="text" name="country2" id="country2"><br></label>
+                  <label for="state"><span>State</span><input type="text" name="state" id="state"><br></label>
+                  <label for="phone"><span>Phone</span><input type="text" name="phone" id="phone"><br></label>
+                  Ship items to the above billing address<input type="checkbox" name="copyinfo" id="copyinfo">
+                </td>
+                <td>
+                  <h2>Shipping Address</h2>
+                  <label for="sfname"><span>First Name</span><input type="text" name="sfname" id="sfname"><br></label>
+                  <label for="slname"><span>Last Name</span><input type="text" name="slname" id="slname"><br></label>
+                  <label for="scompany"><span>Company</span><input type="text" name="scompany" id="scompany"><br></label>
+                  <label for="saddress"><span>Address</span><input type="text" name="saddress" id="saddress"><br></label>
+                  <label for="saddress2"><span>Address 2</span><input type="text" name="saddress2" id="saddress2"><br></label>
+                  <label for="scity"><span>City</span><input type="text" name="scity" id="scity" ><br></label>
+                  <label for="szip2"><span>Postal / zip <br>code</span><input type="text" name="szip2" id="szip2"><br></label>
+                  <label for="scountry2"><span>Country</span><input type="text" name="scountry2" id="scountry2"><br></label>
+                  <label for="sstate"><span>State</span><input type="text" name="sstate" id="sstate"><br></label>
+                  <label for="sphone"><span>Phone</span><input type="text" name="sphone" id="sphone"><br></label>
+                  <input type="submit" value="Continue to next steps">
+                </td>
+              </tr>
+            </table>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="social">
       <div class="social-col1">
         <ul>
