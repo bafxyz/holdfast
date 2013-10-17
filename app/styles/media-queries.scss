@@ -286,6 +286,8 @@
       max-width: 360px;
     }
 
+  .faq-right label,
+  .faq-right select,
   .products-right label,
   .products-right select {
     width: 100%;
@@ -420,6 +422,32 @@
   .calculate-shipping input[type="radio"] {
     margin-bottom: 20px;
   }
+
+  .mailing-list-message {
+    form {
+      padding-top: 30px;
+
+      input[type="text"],
+      input[type="submit"] {
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+    }
+  }
+
+  .faq .text form {
+    margin-top: 50px;
+
+    .search-block {
+      @include span-columns(6 omega, 6);
+    }
+
+    input[type="submit"] {
+      display: none;
+    }
+
+
+  }
 } // END of Mobile styles
 
 
@@ -507,6 +535,7 @@
     @include span-columns(3 omega, 3);
   }
 
+  .faq-right .heading,
   .products-right {
     position: relative;
 
@@ -516,17 +545,22 @@
       right: 0;
       text-align: right;
     }
-
-    .items {
-      margin-top: 70px;
-    }
   }
 
+ .products-right .items {
+    margin-top: 70px;
+  }
+
+  .faq-right label,
+  .faq-right select,
   .products-right label,
   .products-right select {
     min-width: 255px;
   }
 
+  .faq .text {
+    padding-left: 0;
+  }
 } // END of Tablet styles
 
 // ==============================================//
@@ -712,6 +746,24 @@
     text-align: center;
   }
 
+  .faq-left {
+    display: none;
+  }
+
+  .faq-right {
+    width: 100%;
+    margin-left: 0;
+
+    h1:before {
+      left: 50%;
+      margin-left: -18px;
+    }
+
+    .text {
+      background: none;
+    }
+  }
+
 } // END of Mobile and Tablet styles
 
 @include at-breakpoint(6 810px) {
@@ -733,6 +785,10 @@
   }
 
   .product .social {
+    display: none;
+  }
+
+  .back-to-holdfast {
     display: none;
   }
 } // END of Tablet and Desktop styles
@@ -764,6 +820,7 @@
     max-width: 360px;
   }
 
+  .faq-right .heading,
   .products-right .heading {
     display: none;
   }

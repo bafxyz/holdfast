@@ -107,6 +107,14 @@ input[type="radio"] {
   padding: 0;
 }
 
+input:required {
+  box-shadow:0 0 3px red;
+}
+
+input:invalid {
+  box-shadow:none;
+}
+
 input::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -115,6 +123,10 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   vertical-align: top;
+}
+
+.placeholder {
+  color: #D9D9D9;
 }
 
 .cf:before,
@@ -1097,22 +1109,6 @@ header {
     font-size: 9px;
     font-family: $main-font;
 
-    ::-webkit-input-placeholder { /* WebKit browsers */
-      color: #0c0d0f;
-    }
-
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: #0c0d0f;
-    }
-
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: #0c0d0f;
-    }
-
-    :-ms-input-placeholder { /* Internet Explorer 10+ */
-      color: #0c0d0f;
-    }
-
     input {
       float: left;
       margin: 0;
@@ -1175,7 +1171,9 @@ footer {
 
 @import "product";
 @import "products";
+@import "faq";
 @import "swag-products";
+@import "mailing-list";
 @import "about";
 @import "spotlight";
 @import "spotlight_inside";
@@ -1183,5 +1181,6 @@ footer {
 @import "news";
 @import "404";
 @import "contact";
+@import "thank-you";
 @import "checkout";
 @import "media-queries";
