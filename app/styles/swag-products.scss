@@ -1,0 +1,225 @@
+@import "../bower_components/susy/sass/susy";
+@import "variables";
+
+body[class^="swag"] {
+  .back-to-holdfast,
+  .header-col1 {
+    padding-top: 25px;
+
+    img {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 0;
+      line-height: 1;
+    }
+
+    p a {
+      font-family: $ff1;
+      font-size: 14px;
+      line-height: 1.2;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 3px;
+      text-align: left;
+
+      span {
+        display: block;
+        color: #7C5327;
+      }
+    }
+  }
+
+  .back-to-holdfast {
+    padding-bottom: 50px;
+
+    p {
+      text-align: center;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+
+    p a span {
+      display: inline;
+    }
+  }
+
+  .header-col3 {
+    padding-top: 50px;
+  }
+}
+
+.swag-products {
+  h1 {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 20px;
+
+    &:before {
+      position: absolute;
+      top: -15px;
+      left: 0;
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: url(../images/dealers-h1.png) 0 0 no-repeat;
+      content: " ";
+    }
+  }
+}
+
+
+
+.swag-products-block {
+  width: 100%;
+  clear: both;
+  padding-top: 20px;
+}
+
+.swag-products-left {
+  float: left;
+  width: 180px;
+  padding-right: 30px;
+
+  h1 {
+    margin-bottom: 60px;
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: $ff1;
+  }
+}
+
+.swag-products-right {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-left: 180px;
+
+  form {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  select {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px 10px 15px;
+    outline: none;
+    border: 1px solid #D9D9D9;
+    text-transform: uppercase;
+    font-family: $main-font;
+    cursor: pointer;
+  }
+
+  label {
+    position:relative;
+  }
+
+  label:after {
+    position: absolute;
+    top: -11px;
+    right: 1px;
+    width:40px;
+    height:38px;
+    background: #fff url(../images/select.png) 50% 50% no-repeat;
+    content:' ';
+    pointer-events: none;
+  }
+
+  label:before {
+    position: absolute;
+    top: -11px;
+    right: 1px;
+    display:block;
+    width: 40px;
+    height: 38px;
+    background-color: #fff;
+    content:'';
+    pointer-events: none;
+  }
+
+  .items table {
+    margin: 30px auto 0 auto;
+    width: 100%;
+    max-width: 372px;
+
+    td {
+      vertical-align: middle;
+      font-size: 12px;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    tr:last-child td:last-child {
+      vertical-align: bottom;
+
+      img {
+        float: right;
+      }
+    }
+  }
+}
+
+.swag-products .items {
+  width: 100%;
+  background: url(../images/separator.gif) 0 0 repeat-y;
+  padding-left: 40px;
+  overflow: hidden;
+
+  .item {
+    @include span-columns(1, 2);
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:nth-of-type(2n+2) {
+      @include omega;
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+
+      &:hover {
+        &:before,
+        &:after {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          display: block;
+          content: " ";
+          left: 0;
+          right: 0;
+        }
+
+        &:before {
+          background: url(../images/blocks.png);
+        }
+
+        &:after {
+          background: url(../images/view.png) 50% 50% no-repeat;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

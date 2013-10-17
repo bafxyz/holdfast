@@ -155,8 +155,10 @@
                   </label> <br>
                   <input type="text" name="zip" id="zip" placeholder="Enter zip code"> <br>
                   <input type="submit" value="Check shipping taxes"> <br>
-                  <input type="radio" name="postal" id="dhl"> DHL Express at  $35<br>
-                  <input type="radio" name="postal" id="usps"> USPS Express at  $86<br>
+                  <div class="radios">
+                    <input type="radio" name="postal" id="dhl"> DHL Express at  $35<br>
+                    <input type="radio" name="postal" id="usps"> USPS Express at  $86<br>
+                  </div>
                 </td>
                 <td>
                   <p>
@@ -183,7 +185,7 @@
     <div class="bd-horisontal">
       <div class="bd-vertical">
         <div class="contact-email">
-          YOUR CONTACT EMAIL:
+          <h3>YOUR CONTACT EMAIL:</h3>
           <form action="#">
             <input type="text" name="email" id="email" placeholder="EMAIL">
             <table>

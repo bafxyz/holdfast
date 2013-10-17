@@ -292,6 +292,11 @@
     max-width: 372px;
   }
 
+  .swag-products .header-col1 {
+    visibility: hidden;
+  }
+
+  .swag-products .items,
   .products .items {
 
     .item {
@@ -319,6 +324,102 @@
       }
     }
   }
+
+  .calculate-shipping {
+    text-align: center;
+
+    table td,
+    table td:last-child {
+      display: block;
+      text-align: center;
+    }
+
+    label {
+      margin-right: 0;
+    }
+  }
+
+  .contact-email {
+    text-align: center;
+
+    table td {
+      text-align: center;
+    }
+
+    label {
+      margin-bottom: 0;
+    }
+
+    label span,
+    label input[type="text"] {
+      display: block;
+      margin: 0 auto;
+      float: none;
+    }
+
+    input[type="text"] {
+      text-align: center;
+    }
+
+    label span {
+      margin-bottom: 10px;
+      white-space: nowrap;
+    }
+
+    input[type="submit"] {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .checkout .checkout-block table tr td {
+    display: block;
+    width: auto;
+    padding: 10px;
+  }
+
+  .checkout .checkout-block table tr td:nth-child(1) {
+    @include span-columns(2, 6);
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      max-width: 47px;
+    }
+
+  }
+
+  .checkout .checkout-block table tr td:nth-child(2) {
+    @include span-columns(4 omega, 6);
+  }
+
+  .checkout .checkout-block table tr td:nth-child(3) {
+    @include span-columns(2, 6);
+    @include pre(2);
+  }
+
+  .checkout .checkout-block table tr td:nth-child(4) {
+    @include span-columns(1, 6);
+  }
+
+  .checkout .checkout-block table tr td:nth-child(5) {
+    @include span-columns(1 omega, 6);
+  }
+
+  .checkout .radios {
+    left: 50%;
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: -90px;
+  }
+
+  .calculate-shipping input[type="radio"] {
+    margin-bottom: 20px;
+  }
 } // END of Mobile styles
 
 
@@ -326,7 +427,7 @@
 // Tablet styles                                 //
 // ==============================================//
 @include at-breakpoint($mobile-view 6 $tablet-view) {
-  .tablet-hide{
+  .tablet-hide {
     display: none;
   }
 
@@ -563,8 +664,12 @@
     }
   }
 
+  .swag-products-block {
+    padding-top: 50px;
+  }
 
-  .products h1 {
+  .products h1,
+  .swag-products h1 {
     text-align: center;
 
      &:before {
@@ -577,13 +682,20 @@
     display: none;
   }
 
-  .products-right {
+  .products-right,
+  .swag-products-right {
     margin-left: 0;
 
     .items {
       padding-left: 0;
       background: none;
     }
+  }
+
+  .swag-products-left {
+    text-align: center;
+    width: 100%;
+    padding: 0;
   }
 
   .checkout .contact-email table td {
