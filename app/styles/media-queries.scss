@@ -21,11 +21,13 @@
     padding-bottom: 10px;
   }
 
-  .product .slogan {
+  .product .slogan,
+  .swag-product .slogan {
     margin-bottom: 10px;
   }
 
-  .product-text {
+  .product-text,
+  .swag-product-text {
     padding: 0;
   }
 
@@ -294,7 +296,7 @@
     max-width: 372px;
   }
 
-  .swag-products .header-col1 {
+  body[class^="swag"] .header-col1 {
     visibility: hidden;
   }
 
@@ -504,12 +506,6 @@
     }
   }
 
-  .product-sizes {
-    ul li img:last-child {
-      display: none;
-    }
-  }
-
   //SC styles for Spotlight inside page
   .inside .leftWrapper {
     @include span-columns(3 omega, 3);
@@ -641,6 +637,7 @@
     }
   }
 
+  .swag-product .social,
   .product .social {
     display: none;
   }
@@ -732,6 +729,13 @@
     padding: 0;
   }
 
+  .product-sizes,
+  .swag-product-sizes {
+    ul li img:last-child {
+      display: none;
+    }
+  }
+
   .checkout .contact-email table td {
     display: block;
     width: 100%;
@@ -805,7 +809,8 @@
     border-left: 1px solid #fff;
   }
 
-  .product-sizes {
+  .product-sizes,
+  .swag-product-sizes {
     ul li {
       display: inline-block;
       padding: 0 15px;

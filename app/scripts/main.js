@@ -105,6 +105,17 @@ $(function() {
     });
   }
 
+  // Home page and Product page Slider
+
+  if ($('.swag-rslides').length !== 0) {
+    $('.swag-rslides').responsiveSlides({
+      auto: true,
+      pager: false,
+      nav: false,
+      speed: 500
+    });
+  }
+
   // Init
 
   sloganPosition();
